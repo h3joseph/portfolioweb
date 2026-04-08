@@ -6,63 +6,78 @@
   <title>Joseph Haccandy — Développeur IA & Data</title>
   <link rel="stylesheet" href="static/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet" />
 </head>
 <body>
+
+  <div id="scroll-progress"></div>
+
+  <!-- Dots chapitres -->
+  <nav id="chapter-dots">
+    <a href="#hero"       class="cdot active"><span class="cdot-pip"></span><span class="cdot-label">Prologue</span></a>
+    <a href="#about"      class="cdot"><span class="cdot-pip"></span><span class="cdot-label">L'Architecte</span></a>
+    <a href="#experience" class="cdot"><span class="cdot-pip"></span><span class="cdot-label">Les Batailles</span></a>
+    <a href="#formation"  class="cdot"><span class="cdot-pip"></span><span class="cdot-label">La Forge</span></a>
+    <a href="#skills"     class="cdot"><span class="cdot-pip"></span><span class="cdot-label">L'Arsenal</span></a>
+    <a href="#loisirs"    class="cdot"><span class="cdot-pip"></span><span class="cdot-label">L'Âme</span></a>
+    <a href="#contact"    class="cdot"><span class="cdot-pip"></span><span class="cdot-label">La Rencontre</span></a>
+  </nav>
 
   <!-- ══════════ NAV ══════════ -->
   <nav id="nav">
     <div class="nav-inner">
       <span class="nav-logo">JH</span>
       <ul class="nav-links">
-        <li><a href="#hero">Accueil</a></li>
-        <li><a href="#about">Profil</a></li>
-        <li><a href="#experience">Expérience</a></li>
-        <li><a href="#formation">Formation</a></li>
-        <li><a href="#skills">Compétences</a></li>
-        <li><a href="#loisirs">Loisirs</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hero">Prologue</a></li>
+        <li><a href="#about">Acte I</a></li>
+        <li><a href="#experience">Acte II</a></li>
+        <li><a href="#formation">Acte III</a></li>
+        <li><a href="#skills">Acte IV</a></li>
+        <li><a href="#loisirs">Acte V</a></li>
+        <li><a href="#contact">Épilogue</a></li>
       </ul>
-      <a href="static/cv/joseph_haccandy_cv.pdf" download class="nav-cta">
-        <svg viewBox="0 0 20 20" fill="none"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".4"/></svg>
-        Télécharger CV
-      </a>
+      <a href="static/cv/joseph_haccandy_cv.pdf" download class="nav-cta magnetic">↓ CV</a>
     </div>
   </nav>
 
-  <!-- ══════════ HERO ══════════ -->
+  <!-- ══════════════════════════════════════════════
+       HERO · PROLOGUE
+  ═══════════════════════════════════════════════════ -->
   <section id="hero">
-    <div class="hero-bg">
-      <div class="orb orb-1"></div>
-      <div class="orb orb-2"></div>
-      <div class="grid-lines"></div>
+    <!-- Fond : éclairage de scène + Adinkra en filigrane -->
+    <div class="hero-stage-bg">
+      <div class="stage-glow glow-terra"></div>
+      <div class="stage-glow glow-kente"></div>
+      <div class="stage-glow glow-green"></div>
+      <div class="hero-grid"></div>
     </div>
-    <div class="hero-content">
-      <div class="hero-tag reveal">Disponible pour alternance / stage</div>
-      <h1 class="hero-name reveal">
-        <span class="line">Joseph</span>
-        <span class="line accent">Haccandy</span>
-      </h1>
-      <p class="hero-role reveal">Développeur <span class="highlight">IA</span> & <span class="highlight">Data</span></p>
-      <p class="hero-desc reveal">Je transforme des données brutes en décisions intelligentes.<br>Pipeline ETL · Machine Learning · Applications data-driven.</p>
-      <div class="hero-actions reveal">
-        <a href="#about" class="btn-primary">Découvrir mon profil</a>
-        <a href="static/cv/joseph_haccandy_cv.pdf" download class="btn-ghost">
-          <svg viewBox="0 0 20 20" fill="none" width="18"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".5"/></svg>
-          Télécharger CV
-        </a>
+    <!-- Adinkra en filigrane -->
+    <div class="adinkra-bg-pattern" style="background-image:url('image/villageois.png')"></div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="chapter-mark reveal">— Prologue</div>
+        <div class="hero-tag reveal">Disponible pour alternance / stage</div>
+        <h1 class="hero-name reveal">
+          <span class="line">Joseph</span>
+          <span class="line accent" id="scramble-target">Haccandy</span>
+        </h1>
+        <p class="hero-role reveal">Développeur <span class="hl-terra">IA</span> & <span class="hl-kente">Data</span></p>
+        <p class="hero-desc reveal"><em>Avant le rideau… une silhouette se dessine dans la lumière des données. Elle a un nom — et une histoire à raconter.</em></p>
+        <div class="hero-actions reveal">
+          <a href="#about" class="btn-primary magnetic">Ouvrir le rideau</a>
+          <a href="static/cv/joseph_haccandy_cv.pdf" download class="btn-ghost magnetic">
+            <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".5"/></svg>
+            Télécharger CV
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="hero-visual reveal">
-      <div class="avatar-ring">
-        <div class="avatar-inner">
-          <svg viewBox="0 0 100 100" class="avatar-svg">
-            <circle cx="50" cy="38" r="22" fill="#4DA8DA" opacity=".15"/>
-            <circle cx="50" cy="38" r="18" fill="#4DA8DA" opacity=".25"/>
-            <circle cx="50" cy="36" r="13" fill="#c9e8fa"/>
-            <ellipse cx="50" cy="80" rx="28" ry="14" fill="#4DA8DA" opacity=".18"/>
-            <ellipse cx="50" cy="77" rx="22" ry="10" fill="#c9e8fa" opacity=".5"/>
-          </svg>
+
+      <div class="hero-visual" id="hero-visual">
+        <div class="portrait-wrap" id="portrait-frame">
+          <div class="portrait-kente-border"></div>
+          <img src="image/moi-IAgenerated.png" alt="Joseph Haccandy" class="portrait-img" />
+          <div class="portrait-caption">Joseph Haccandy · Portrait, 2024</div>
         </div>
         <div class="float-badge b1">Python</div>
         <div class="float-badge b2">Talend</div>
@@ -70,24 +85,39 @@
         <div class="float-badge b4">ML</div>
       </div>
     </div>
+
     <a href="#about" class="scroll-hint">
-      <span></span>
+      <span class="scroll-hint-text">Acte I</span>
+      <span class="scroll-hint-line"></span>
     </a>
   </section>
 
-  <!-- ══════════ ABOUT ══════════ -->
+  <!-- ══════════════════════════════════════════════
+       ABOUT · ACTE I  — symbole : Infidèle (nœud)
+  ═══════════════════════════════════════════════════ -->
   <section id="about">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/infidele.png'); opacity:.022;"></div>
     <div class="container">
-      <div class="section-label reveal">À propos</div>
-      <h2 class="section-title reveal">Mon <span class="accent">Profil</span></h2>
+      <div class="act-header reveal">
+        <div class="act-number">I</div>
+        <div>
+          <div class="section-label">
+            <img src="image/infidele.png" class="adinkra-icon" aria-hidden="true" />
+            À propos
+          </div>
+          <h2 class="section-title">L'<span class="accent">Architecte</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"Il y a ceux qui voient les données comme un obstacle. Il y a ceux qui y lisent une histoire. Joseph Haccandy, lui — les transforme en décisions."</p>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>Passionné par la transformation des données en décisions stratégiques et la création d'applications intelligentes. J'interviens sur l'ensemble de la chaîne de traitement des données, de la collecte au déploiement.</p>
+          <p>Passionné par la transformation des données en décisions stratégiques et la création d'applications intelligentes. J'interviens sur l'ensemble de la chaîne de traitement, de la collecte au déploiement.</p>
           <p>Actuellement en <strong>Bachelor Ingénierie IA</strong> à EPSI Lille, je cherche une <strong>alternance stimulante</strong> pour contribuer à des projets data à fort impact.</p>
           <div class="about-stats">
             <div class="stat reveal">
               <span class="stat-num">3+</span>
-              <span class="stat-label">Années d'expérience</span>
+              <span class="stat-label">Années d'exp.</span>
             </div>
             <div class="stat reveal">
               <span class="stat-num">10+</span>
@@ -95,47 +125,44 @@
             </div>
             <div class="stat reveal">
               <span class="stat-num">3</span>
-              <span class="stat-label">Langues maîtrisées</span>
+              <span class="stat-label">Langues</span>
             </div>
           </div>
         </div>
-        <div class="about-card reveal">
-          <div class="card-header">
-            <div class="card-dot"></div>
-            <span>joseph_haccandy.py</span>
+        <div class="artwork-container reveal">
+          <div class="artwork-frame">
+            <img src="image/devant-lordi.jpg" alt="L'atelier" class="artwork-img" />
+            <div class="artwork-overlay"><span>L'atelier · 2024</span></div>
           </div>
-          <div class="card-code">
-            <div class="code-line"><span class="kw">class</span> <span class="cn">Haccandy</span>:</div>
-            <div class="code-line indent"><span class="kw">def</span> <span class="fn">__init__</span>(self):</div>
-            <div class="code-line indent2"><span class="va">self</span>.nom = <span class="st">"Joseph Haccandy"</span></div>
-            <div class="code-line indent2"><span class="va">self</span>.role = <span class="st">"Dév IA & Data"</span></div>
-            <div class="code-line indent2"><span class="va">self</span>.ville = <span class="st">"Villeneuve-d'Ascq"</span></div>
-            <div class="code-line indent2"><span class="va">self</span>.dispo = <span class="bl">True</span></div>
-            <div class="code-line indent2"><span class="va">self</span>.stack = [</div>
-            <div class="code-line indent3"><span class="st">"Python"</span>, <span class="st">"SQL"</span>,</div>
-            <div class="code-line indent3"><span class="st">"Talend"</span>, <span class="st">"ML"</span></div>
-            <div class="code-line indent2">]</div>
-            <div class="code-line">&nbsp;</div>
-            <div class="code-line indent"><span class="kw">def</span> <span class="fn">contact</span>(self):</div>
-            <div class="code-line indent2"><span class="kw">return</span> <span class="st">"josephhaccandy@gmail.com"</span></div>
-          </div>
+          <div class="artwork-meta">Illustration — L'architecte à l'œuvre</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ══════════ EXPÉRIENCE ══════════ -->
+  <!-- ══════════════════════════════════════════════
+       EXPÉRIENCE · ACTE II  — symbole : Kpakpato (oiseau/sankofa)
+  ═══════════════════════════════════════════════════ -->
   <section id="experience" class="section-dark">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/kpakpato.png'); opacity:.025; background-size:90px 90px;"></div>
     <div class="container">
-      <div class="section-label reveal">Parcours</div>
-      <h2 class="section-title reveal">Expériences <span class="accent">professionnelles</span></h2>
+      <div class="act-header reveal">
+        <div class="act-number">II</div>
+        <div>
+          <div class="section-label">
+            <img src="image/kpakpato.png" class="adinkra-icon" aria-hidden="true" />
+            Parcours
+          </div>
+          <h2 class="section-title">Les <span class="accent">Batailles</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"On ne devient pas ce qu'on est sans affronter quelque chose. Voici les arènes où il s'est forgé."</p>
       <div class="timeline">
 
         <div class="timeline-item reveal">
           <div class="tl-marker">
-            <div class="tl-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+            <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none" width="22"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <div class="tl-line"></div>
           </div>
           <div class="tl-content">
@@ -143,17 +170,13 @@
             <h3 class="tl-title">Stagiaire Data Science</h3>
             <div class="tl-company">CIFOR-ICRAF · Côte d'Ivoire</div>
             <p class="tl-desc">Nettoyage et structuration de données forestières et agricoles à grande échelle. Développement d'une application de visualisation interactive avec Streamlit. Optimisation des processus d'analyse décisionnelle pour les équipes terrain.</p>
-            <div class="tl-tags">
-              <span>Python</span><span>Streamlit</span><span>Pandas</span><span>Data Viz</span>
-            </div>
+            <div class="tl-tags"><span>Python</span><span>Streamlit</span><span>Pandas</span><span>Data Viz</span></div>
           </div>
         </div>
 
         <div class="timeline-item reveal">
           <div class="tl-marker">
-            <div class="tl-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="1.8"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor" stroke-width="1.8"/></svg>
-            </div>
+            <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none" width="22"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" stroke="currentColor" stroke-width="1.8"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor" stroke-width="1.8"/></svg></div>
             <div class="tl-line"></div>
           </div>
           <div class="tl-content">
@@ -161,25 +184,114 @@
             <h3 class="tl-title">Auto-entrepreneur</h3>
             <div class="tl-company">Vente de produits imprimés personnalisés</div>
             <p class="tl-desc">Gestion complète d'une activité e-commerce en autonomie : conception des produits, production, gestion de la relation client, logistique et suivi des ventes.</p>
-            <div class="tl-tags">
-              <span>E-commerce</span><span>Gestion projet</span><span>Relation client</span>
-            </div>
+            <div class="tl-tags"><span>E-commerce</span><span>Gestion projet</span><span>Relation client</span></div>
           </div>
         </div>
 
         <div class="timeline-item reveal">
           <div class="tl-marker">
-            <div class="tl-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="22"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.8"/></svg>
-            </div>
+            <div class="tl-icon"><svg viewBox="0 0 24 24" fill="none" width="22"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.8"/></svg></div>
           </div>
           <div class="tl-content">
             <div class="tl-date">2020</div>
             <h3 class="tl-title">Stagiaire Développement Web</h3>
             <div class="tl-company">Etudesk · Côte d'Ivoire</div>
-            <p class="tl-desc">Développement front-end d'interfaces web pour une plateforme d'e-learning : HTML, CSS, JavaScript. Collaboration avec l'équipe technique sur l'intégration de maquettes.</p>
-            <div class="tl-tags">
-              <span>HTML/CSS</span><span>JavaScript</span><span>Front-end</span>
+            <p class="tl-desc">Développement front-end d'interfaces web pour une plateforme d'e-learning. Collaboration avec l'équipe technique sur l'intégration de maquettes.</p>
+            <div class="tl-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Front-end</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMATION · ACTE III — symbole : Nzara
+  ═══════════════════════════════════════════════════ -->
+  <section id="formation">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/nzara.png'); opacity:.026; background-size:75px 75px;"></div>
+    <div class="container">
+      <div class="act-header reveal">
+        <div class="act-number">III</div>
+        <div>
+          <div class="section-label">
+            <img src="image/nzara.png" class="adinkra-icon" aria-hidden="true" />
+            Études
+          </div>
+          <h2 class="section-title">La <span class="accent">Forge</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"On ne forge pas une lame sans feu. Chaque diplôme est une clé — mais c'est la curiosité qui ouvre les vraies portes."</p>
+      <p class="flip-instruction reveal">Survolez les cartes pour les retourner ↗</p>
+      <div class="formation-grid">
+
+        <div class="flip-card reveal" data-delay="0">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-year">2025 – en cours</div>
+              <div class="fc-badge current">En cours</div>
+              <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" width="30"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+              <h3>Bachelor Ingénierie IA</h3>
+              <p class="fc-school">EPSI Lille</p>
+              <p class="fc-desc">ETL, modélisation de données, pipelines IA.</p>
+              <span class="flip-hint">Retourner →</span>
+            </div>
+            <div class="flip-back">
+              <p class="flip-back-title">Ce que j'y apprends</p>
+              <ul class="flip-list">
+                <li>Pipelines ETL & modélisation</li>
+                <li>Machine Learning en production</li>
+                <li>Architecture data moderne</li>
+                <li>Applications IA déployées</li>
+              </ul>
+              <span class="flip-back-badge">En cours · EPSI Lille</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal" data-delay="100">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-year">2023 – 2025</div>
+              <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" width="30"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+              <h3>Bachelor Gestion Projet IA & Data</h3>
+              <p class="fc-school">IA School</p>
+              <p class="fc-desc">ML, feature engineering, gestion de projets data.</p>
+              <span class="flip-hint">Retourner →</span>
+            </div>
+            <div class="flip-back">
+              <p class="flip-back-title">Compétences acquises</p>
+              <ul class="flip-list">
+                <li>Machine learning & feature engineering</li>
+                <li>Gestion de projets data</li>
+                <li>Visualisation & analyse</li>
+                <li>Méthodes agiles</li>
+              </ul>
+              <span class="flip-back-badge">Obtenu · IA School</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card reveal" data-delay="200">
+          <div class="flip-inner">
+            <div class="flip-front">
+              <div class="fc-year">2022</div>
+              <div class="fc-icon"><svg viewBox="0 0 24 24" fill="none" width="30"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+              <h3>Immersion anglophone</h3>
+              <p class="fc-school">Ghana</p>
+              <p class="fc-desc">Immersion totale en anglais. Niveau B1 acquis.</p>
+              <span class="flip-hint">Retourner →</span>
+            </div>
+            <div class="flip-back">
+              <p class="flip-back-title">L'expérience Ghana</p>
+              <ul class="flip-list">
+                <li>Immersion professionnelle totale</li>
+                <li>Niveau B1 certifié</li>
+                <li>Ouverture interculturelle</li>
+                <li>Adaptabilité renforcée</li>
+              </ul>
+              <span class="flip-back-badge">Certifié · B1 Anglais</span>
             </div>
           </div>
         </div>
@@ -188,62 +300,28 @@
     </div>
   </section>
 
-  <!-- ══════════ FORMATION ══════════ -->
-  <section id="formation">
-    <div class="container">
-      <div class="section-label reveal">Études</div>
-      <h2 class="section-title reveal">Ma <span class="accent">Formation</span></h2>
-      <div class="formation-grid">
-
-        <div class="formation-card reveal" data-delay="0">
-          <div class="fc-year">2025 – en cours</div>
-          <div class="fc-badge current">En cours</div>
-          <div class="fc-icon">
-            <svg viewBox="0 0 24 24" fill="none" width="32"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 12v5c3 3 9 3 12 0v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Bachelor Ingénierie IA</h3>
-          <p class="fc-school">EPSI Lille</p>
-          <p class="fc-desc">ETL, modélisation de données, pipelines IA, développement d'applications intelligentes.</p>
-        </div>
-
-        <div class="formation-card reveal" data-delay="100">
-          <div class="fc-year">2023 – 2025</div>
-          <div class="fc-icon">
-            <svg viewBox="0 0 24 24" fill="none" width="32"><rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Bachelor Gestion de Projet IA & Data</h3>
-          <p class="fc-school">IA School</p>
-          <p class="fc-desc">Machine learning, feature engineering, gestion de projets data, visualisation et analyse.</p>
-        </div>
-
-        <div class="formation-card reveal" data-delay="200">
-          <div class="fc-year">2022</div>
-          <div class="fc-icon">
-            <svg viewBox="0 0 24 24" fill="none" width="32"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>
-          </div>
-          <h3>Immersion anglophone</h3>
-          <p class="fc-school">Ghana</p>
-          <p class="fc-desc">Immersion totale en anglais en environnement professionnel et culturel. Niveau B1 acquis.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ COMPÉTENCES ══════════ -->
+  <!-- ══════════════════════════════════════════════
+       COMPÉTENCES · ACTE IV — symbole : Traitre
+  ═══════════════════════════════════════════════════ -->
   <section id="skills" class="section-dark">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/traitre.png'); opacity:.022; background-size:85px 85px;"></div>
     <div class="container">
-      <div class="section-label reveal">Expertise</div>
-      <h2 class="section-title reveal">Compétences <span class="accent">techniques</span></h2>
+      <div class="act-header reveal">
+        <div class="act-number">IV</div>
+        <div>
+          <div class="section-label">
+            <img src="image/traitre.png" class="adinkra-icon" aria-hidden="true" />
+            Expertise
+          </div>
+          <h2 class="section-title">L'<span class="accent">Arsenal</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"Donnez-lui des données brutes — il en fera une histoire. Donnez-lui un problème — il en fera une solution."</p>
       <div class="skills-layout">
 
         <div class="skills-group reveal">
-          <div class="sg-header">
-            <div class="sg-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <span>Langages & Data</span>
-          </div>
+          <div class="sg-header"><div class="sg-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div><span>Langages & Data</span></div>
           <div class="skill-bars">
             <div class="skill-bar" data-pct="85"><span class="sb-label">Python</span><div class="sb-track"><div class="sb-fill"></div></div><span class="sb-pct">85%</span></div>
             <div class="skill-bar" data-pct="75"><span class="sb-label">SQL</span><div class="sb-track"><div class="sb-fill"></div></div><span class="sb-pct">75%</span></div>
@@ -252,12 +330,7 @@
         </div>
 
         <div class="skills-group reveal">
-          <div class="sg-header">
-            <div class="sg-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <span>Outils & ETL</span>
-          </div>
+          <div class="sg-header"><div class="sg-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><span>Outils & ETL</span></div>
           <div class="skill-bars">
             <div class="skill-bar" data-pct="80"><span class="sb-label">Talend</span><div class="sb-track"><div class="sb-fill"></div></div><span class="sb-pct">80%</span></div>
             <div class="skill-bar" data-pct="70"><span class="sb-label">Power BI</span><div class="sb-track"><div class="sb-fill"></div></div><span class="sb-pct">70%</span></div>
@@ -266,12 +339,7 @@
         </div>
 
         <div class="skills-group reveal">
-          <div class="sg-header">
-            <div class="sg-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="20"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
-            <span>Développement</span>
-          </div>
+          <div class="sg-header"><div class="sg-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><polyline points="16 18 22 12 16 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><polyline points="8 6 2 12 8 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><span>Développement</span></div>
           <div class="skill-bars">
             <div class="skill-bar" data-pct="75"><span class="sb-label">HTML/CSS/JS</span><div class="sb-track"><div class="sb-fill"></div></div><span class="sb-pct">75%</span></div>
             <div class="skill-bar" data-pct="70"><span class="sb-label">Streamlit</span><div class="sb-track"><div class="sb-fill"></div></div><span class="sb-pct">70%</span></div>
@@ -280,12 +348,7 @@
         </div>
 
         <div class="skills-group reveal">
-          <div class="sg-header">
-            <div class="sg-icon">
-              <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-            </div>
-            <span>Savoir-faire</span>
-          </div>
+          <div class="sg-header"><div class="sg-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div><span>Savoir-faire</span></div>
           <div class="soft-skills">
             <span class="soft-tag">Traitement données</span>
             <span class="soft-tag">Feature engineering</span>
@@ -297,208 +360,176 @@
         </div>
 
       </div>
-
-      <!-- Langues -->
       <div class="langues-row reveal">
         <h3 class="langues-title">Langues</h3>
         <div class="langues-list">
-          <div class="langue-item">
-            <span class="langue-flag">🇫🇷</span>
-            <span class="langue-name">Français</span>
-            <span class="langue-level natif">Natif</span>
-          </div>
-          <div class="langue-item">
-            <span class="langue-flag">🇬🇧</span>
-            <span class="langue-name">Anglais</span>
-            <span class="langue-level b1">B1</span>
-          </div>
-          <div class="langue-item">
-            <span class="langue-flag">🇪🇸</span>
-            <span class="langue-name">Espagnol</span>
-            <span class="langue-level a1">A1</span>
-          </div>
+          <div class="langue-item"><span class="langue-flag">🇫🇷</span><span class="langue-name">Français</span><span class="langue-level natif">Natif</span></div>
+          <div class="langue-item"><span class="langue-flag">🇬🇧</span><span class="langue-name">Anglais</span><span class="langue-level b1">B1</span></div>
+          <div class="langue-item"><span class="langue-flag">🇪🇸</span><span class="langue-name">Espagnol</span><span class="langue-level a1">A1</span></div>
         </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ══════════ LOISIRS ══════════ -->
+  <!-- ══════════════════════════════════════════════
+       LOISIRS · ACTE V — Carousel
+  ═══════════════════════════════════════════════════ -->
   <section id="loisirs">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/villageois.png'); opacity:.02; background-size:65px 65px;"></div>
     <div class="container">
-      <div class="section-label reveal">En dehors du travail</div>
-      <h2 class="section-title reveal">Centres d'<span class="accent">intérêt</span></h2>
-      <div class="loisirs-grid">
+      <div class="act-header reveal">
+        <div class="act-number">V</div>
+        <div>
+          <div class="section-label">
+            <img src="image/villageois.png" class="adinkra-icon" aria-hidden="true" />
+            En dehors du travail
+          </div>
+          <h2 class="section-title">L'<span class="accent">Âme</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"Car il y a toujours plus à découvrir que ce qu'un CV peut contenir. Voici ce qui bat sous la surface."</p>
+      <p class="drag-instruction reveal">← Glisse pour explorer mes univers →</p>
+    </div>
 
-        <div class="loisir-card reveal" data-delay="0">
-          <div class="lc-bg" style="background: linear-gradient(135deg,#0d3b66 0%,#1a6fa8 100%)">
-            <div class="lc-shape"></div>
+    <div class="loisirs-carousel-wrapper">
+      <div class="loisirs-carousel" id="loisirs-carousel">
+
+        <div class="lcard reveal" data-delay="0">
+          <div class="lcard-top" style="--c1:#6B1515;--c2:#C0392B">
+            <div class="lcard-badge">SPORT</div>
+            <img src="image/basket.png" alt="Basket" class="lcard-img pixelart" />
+            <div class="lcard-shine"></div>
           </div>
-          <div class="lc-illus">
-            <svg viewBox="0 0 80 80" fill="none" width="70">
-              <circle cx="40" cy="40" r="22" stroke="#4DA8DA" stroke-width="2" opacity=".4"/>
-              <circle cx="40" cy="40" r="14" fill="#4DA8DA" opacity=".15"/>
-              <path d="M28 32 Q40 20 52 32 Q56 40 52 48 Q40 60 28 48 Q24 40 28 32Z" stroke="#4DA8DA" stroke-width="2" fill="none"/>
-              <circle cx="40" cy="40" r="4" fill="#4DA8DA"/>
-              <path d="M28 40h24M40 28v24" stroke="#4DA8DA" stroke-width="1.5" opacity=".6"/>
-            </svg>
-          </div>
-          <div class="lc-text">
+          <div class="lcard-bottom">
             <h3>Basket-ball</h3>
-            <p>Esprit d'équipe, stratégie collective et dépassement de soi sur le terrain.</p>
+            <p>Esprit d'équipe, stratégie collective et dépassement de soi.</p>
+            <div class="lcard-tags"><span>Collectif</span><span>Stratégie</span></div>
           </div>
         </div>
 
-        <div class="loisir-card reveal" data-delay="100">
-          <div class="lc-bg" style="background: linear-gradient(135deg,#0a2e1f 0%,#1a6640 100%)">
-            <div class="lc-shape"></div>
+        <div class="lcard reveal" data-delay="80">
+          <div class="lcard-top" style="--c1:#0A3D1A;--c2:#1C6038">
+            <div class="lcard-badge">SPORT</div>
+            <img src="image/tennis.png" alt="Tennis" class="lcard-img pixelart" />
+            <div class="lcard-shine"></div>
           </div>
-          <div class="lc-illus">
-            <svg viewBox="0 0 80 80" fill="none" width="70">
-              <path d="M20 60 Q20 30 40 20 Q60 30 60 60" stroke="#2EC4B6" stroke-width="2" fill="none"/>
-              <circle cx="40" cy="20" r="5" fill="#2EC4B6" opacity=".5"/>
-              <path d="M20 60h40" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round"/>
-              <path d="M30 45 Q40 38 50 45" stroke="#2EC4B6" stroke-width="1.5" fill="none"/>
-              <circle cx="30" cy="50" r="3" fill="#2EC4B6" opacity=".7"/>
-              <circle cx="50" cy="50" r="3" fill="#2EC4B6" opacity=".7"/>
-            </svg>
-          </div>
-          <div class="lc-text">
+          <div class="lcard-bottom">
             <h3>Tennis</h3>
-            <p>Précision, concentration et maîtrise de soi. Un sport qui reflète ma rigueur au travail.</p>
+            <p>Précision, concentration et maîtrise de soi. Ma rigueur en action.</p>
+            <div class="lcard-tags"><span>Précision</span><span>Mental</span></div>
           </div>
         </div>
 
-        <div class="loisir-card reveal" data-delay="200">
-          <div class="lc-bg" style="background: linear-gradient(135deg,#2d1b4e 0%,#6b3fa0 100%)">
-            <div class="lc-shape"></div>
+        <div class="lcard reveal" data-delay="160">
+          <div class="lcard-top lcard-top-light" style="--c1:#f3e8ff;--c2:#e9d5ff">
+            <div class="lcard-badge lcard-badge-dark">CULTURE</div>
+            <img src="image/livre.png" alt="Livre" class="lcard-img pixelart lcard-img-multiply" />
+            <div class="lcard-shine"></div>
           </div>
-          <div class="lc-illus">
-            <svg viewBox="0 0 80 80" fill="none" width="70">
-              <rect x="18" y="20" width="30" height="38" rx="3" stroke="#c084fc" stroke-width="2" fill="none"/>
-              <path d="M24 30h18M24 36h18M24 42h12" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
-              <path d="M42 20v4" stroke="#c084fc" stroke-width="1.5" stroke-linecap="round"/>
-              <rect x="46" y="28" width="16" height="22" rx="2" fill="#6b3fa0" opacity=".3" stroke="#c084fc" stroke-width="1.5"/>
-              <path d="M49 34h10M49 38h7" stroke="#c084fc" stroke-width="1" stroke-linecap="round" opacity=".6"/>
-            </svg>
-          </div>
-          <div class="lc-text">
+          <div class="lcard-bottom">
             <h3>Lecture créative</h3>
-            <p>Romans, essais et ouvrages techniques. La lecture nourrit ma curiosité intellectuelle.</p>
+            <p>Romans, essais et ouvrages techniques. La curiosité comme moteur.</p>
+            <div class="lcard-tags"><span>Curiosité</span><span>Savoir</span></div>
           </div>
         </div>
 
-        <div class="loisir-card reveal" data-delay="300">
-          <div class="lc-bg" style="background: linear-gradient(135deg,#3b2000 0%,#c07000 100%)">
-            <div class="lc-shape"></div>
+        <div class="lcard reveal" data-delay="240">
+          <div class="lcard-top" style="--c1:#0D0A2E;--c2:#2D1B6E">
+            <div class="lcard-badge">GEEK ★</div>
+            <img src="image/loukario.png" alt="Loukario" class="lcard-img lcard-img-pokemon" />
+            <div class="lcard-shine"></div>
           </div>
-          <div class="lc-illus">
-            <svg viewBox="0 0 80 80" fill="none" width="70">
-              <circle cx="40" cy="40" r="20" stroke="#F4A261" stroke-width="2" fill="none"/>
-              <path d="M40 20v5M40 55v5M20 40h5M55 40h5" stroke="#F4A261" stroke-width="1.5" stroke-linecap="round" opacity=".6"/>
-              <path d="M26 26l3.5 3.5M50.5 50.5l3.5 3.5M26 54l3.5-3.5M50.5 29.5l3.5-3.5" stroke="#F4A261" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
-              <path d="M30 40 Q40 28 50 40 Q40 52 30 40Z" stroke="#F4A261" stroke-width="1.8" fill="none"/>
-              <circle cx="40" cy="40" r="4" fill="#F4A261" opacity=".5"/>
-            </svg>
+          <div class="lcard-bottom">
+            <h3>Univers geek</h3>
+            <p>Pokémon, gaming, culture pop. L'âme qui n'oublie jamais d'où elle vient.</p>
+            <div class="lcard-tags"><span>Gaming</span><span>Pop culture</span></div>
           </div>
-          <div class="lc-text">
+        </div>
+
+        <div class="lcard reveal" data-delay="320">
+          <div class="lcard-top lcard-top-emoji" style="--c1:#5C2E00;--c2:#B06A20">
+            <div class="lcard-badge">VOYAGE</div>
+            <div class="lcard-emoji">🌍</div>
+            <div class="lcard-shine"></div>
+          </div>
+          <div class="lcard-bottom">
             <h3>Voyages</h3>
-            <p>Ghana, Côte d'Ivoire, France… Chaque voyage enrichit ma vision du monde et ma créativité.</p>
+            <p>Ghana, Côte d'Ivoire, France… Le monde comme terrain de jeu.</p>
+            <div class="lcard-tags"><span>Cultures</span><span>Découverte</span></div>
           </div>
         </div>
 
-        <div class="loisir-card reveal" data-delay="400" style="grid-column: span 2;">
-          <div class="lc-bg" style="background: linear-gradient(135deg,#1a0a2e 0%,#e11d48 60%,#f97316 100%)">
-            <div class="lc-shape"></div>
+        <div class="lcard reveal" data-delay="400">
+          <div class="lcard-top lcard-top-emoji" style="--c1:#5C0A12;--c2:#A01020">
+            <div class="lcard-badge">VALEURS</div>
+            <div class="lcard-emoji">❤️</div>
+            <div class="lcard-shine"></div>
           </div>
-          <div class="lc-illus">
-            <svg viewBox="0 0 80 80" fill="none" width="70">
-              <path d="M40 15 Q50 25 60 35 Q65 50 55 60 Q45 70 30 65 Q15 58 15 44 Q15 28 28 20Z" stroke="#fb7185" stroke-width="2" fill="none"/>
-              <path d="M40 15 L40 65" stroke="#fb7185" stroke-width="1" opacity=".3"/>
-              <path d="M15 44 L65 44" stroke="#fb7185" stroke-width="1" opacity=".3"/>
-              <circle cx="40" cy="40" r="8" fill="#e11d48" opacity=".2" stroke="#fb7185" stroke-width="1.5"/>
-              <path d="M35 38 Q40 34 45 38 Q40 46 35 38Z" fill="#fb7185" opacity=".7"/>
-            </svg>
-          </div>
-          <div class="lc-text">
+          <div class="lcard-bottom">
             <h3>Engagement humanitaire</h3>
-            <p>Convaincu que la technologie peut être un levier de justice sociale. Je m'intéresse aux projets data qui servent des causes solidaires et au développement durable.</p>
+            <p>La tech comme levier de justice sociale et de développement durable.</p>
+            <div class="lcard-tags"><span>Impact</span><span>Tech for good</span></div>
           </div>
         </div>
 
       </div>
+      <div class="carousel-track-bar"><div class="carousel-track-fill" id="carousel-fill"></div></div>
     </div>
   </section>
 
-  <!-- ══════════ CONTACT & CV ══════════ -->
+  <!-- ══════════════════════════════════════════════
+       CONTACT · ÉPILOGUE — symbole : Mami Wata
+  ═══════════════════════════════════════════════════ -->
   <section id="contact" class="section-dark">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/Mami-wata.png'); opacity:.025; background-size:90px 90px;"></div>
     <div class="container">
-      <div class="section-label reveal">Parlons-nous</div>
-      <h2 class="section-title reveal">Me <span class="accent">contacter</span></h2>
+      <div class="act-header reveal">
+        <div class="act-number epilogue-mark">Ép.</div>
+        <div>
+          <div class="section-label">
+            <img src="image/Mami-wata.png" class="adinkra-icon" aria-hidden="true" />
+            Parlons-nous
+          </div>
+          <h2 class="section-title">La <span class="accent">Rencontre</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"L'histoire ne s'arrête pas ici. Elle commence là où vous tendez la main. Chaque grande rencontre est le premier mot d'un nouveau chapitre."</p>
       <div class="contact-layout">
 
         <div class="contact-info reveal">
-          <p class="contact-intro">Disponible pour une <strong>alternance</strong> ou un <strong>stage</strong> en développement IA & Data. N'hésitez pas à me contacter.</p>
-
+          <p class="contact-intro">Disponible pour une <strong>alternance</strong> ou un <strong>stage</strong> en développement IA & Data. La prochaine page de cette histoire vous appartient.</p>
           <div class="contact-items">
             <a href="mailto:josephhaccandy@gmail.com" class="contact-item">
-              <div class="ci-icon">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.8"/></svg>
-              </div>
-              <div>
-                <div class="ci-label">Email</div>
-                <div class="ci-val">josephhaccandy@gmail.com</div>
-              </div>
+              <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.8"/><polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="1.8"/></svg></div>
+              <div><div class="ci-label">Email</div><div class="ci-val">josephhaccandy@gmail.com</div></div>
             </a>
-
             <a href="tel:0767623641" class="contact-item">
-              <div class="ci-icon">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.86 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.8"/></svg>
-              </div>
-              <div>
-                <div class="ci-label">Téléphone</div>
-                <div class="ci-val">07 67 62 36 41</div>
-              </div>
+              <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.95 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.86 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="1.8"/></svg></div>
+              <div><div class="ci-label">Téléphone</div><div class="ci-val">07 67 62 36 41</div></div>
             </a>
-
             <a href="https://linkedin.com/in/joseph-haccandy" target="_blank" class="contact-item">
-              <div class="ci-icon">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.8"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.8"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.8"/></svg>
-              </div>
-              <div>
-                <div class="ci-label">LinkedIn</div>
-                <div class="ci-val">joseph-haccandy</div>
-              </div>
+              <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.8"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.8"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.8"/></svg></div>
+              <div><div class="ci-label">LinkedIn</div><div class="ci-val">joseph-haccandy</div></div>
             </a>
-
             <a href="https://github.com/h3joseph" target="_blank" class="contact-item">
-              <div class="ci-icon">
-                <svg viewBox="0 0 24 24" fill="none" width="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-              </div>
-              <div>
-                <div class="ci-label">GitHub</div>
-                <div class="ci-val">h3joseph</div>
-              </div>
+              <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" width="20"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+              <div><div class="ci-label">GitHub</div><div class="ci-val">h3joseph</div></div>
             </a>
           </div>
         </div>
 
-        <!-- CV Download card -->
-        <div class="cv-card reveal">
-          <div class="cv-card-inner">
-            <div class="cv-preview">
-              <div class="cv-preview-header"></div>
-              <div class="cv-preview-line w80"></div>
-              <div class="cv-preview-line w60"></div>
-              <div class="cv-preview-line w90"></div>
-              <div class="cv-preview-line w50"></div>
-              <div class="cv-preview-line w75"></div>
-              <div class="cv-preview-line w85"></div>
-            </div>
+        <div class="contact-right reveal">
+          <div class="photo-card-contact">
+            <img src="image/moi-face-mirroire.jpg" alt="Joseph Haccandy" class="contact-photo" />
+            <div class="photo-overlay-text"><span>"La prochaine page vous appartient."</span></div>
+          </div>
+          <div class="cv-card-mini">
             <h3>Mon CV complet</h3>
-            <p>Toutes mes expériences, compétences et formations en un seul document PDF.</p>
-            <a href="static/cv/joseph_haccandy_cv.pdf" download class="btn-download">
-              <svg viewBox="0 0 20 20" fill="none" width="18"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".5"/></svg>
+            <p>Toutes mes expériences, compétences et formations en un seul document.</p>
+            <a href="static/cv/joseph_haccandy_cv.pdf" download class="btn-download magnetic">
+              <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".5"/></svg>
               Télécharger le CV
             </a>
           </div>
@@ -508,11 +539,11 @@
     </div>
   </section>
 
-  <!-- ══════════ FOOTER ══════════ -->
   <footer>
+    <div class="kente-full-bar"></div>
     <div class="footer-inner">
       <span class="footer-logo">JH</span>
-      <p>Joseph Haccandy · Villeneuve-d'Ascq, France · 2025</p>
+      <p><em>Joseph Haccandy · Villeneuve-d'Ascq, France · 2025</em></p>
       <div class="footer-links">
         <a href="mailto:josephhaccandy@gmail.com">Email</a>
         <a href="https://linkedin.com/in/joseph-haccandy" target="_blank">LinkedIn</a>
