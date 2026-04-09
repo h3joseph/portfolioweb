@@ -29,17 +29,31 @@ window.addEventListener('load', () => {
   });
 });
 
-/* ── SKILL BARS ── */
-const barObs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const fill = e.target.querySelector('.sb-fill');
-      if (fill) setTimeout(() => fill.style.width = e.target.dataset.pct + '%', 250);
-      barObs.unobserve(e.target);
-    }
+/* ── SKILLS CAROUSEL ── */
+const skillsCarousel = document.getElementById('skills-carousel');
+const skillsFill = document.getElementById('skills-fill');
+if (skillsCarousel) {
+  let skDown = false, skStartX = 0, skScrollLeft = 0;
+  const updateSkFill = () => {
+    const max = skillsCarousel.scrollWidth - skillsCarousel.clientWidth;
+    if (skillsFill) skillsFill.style.width = (max > 0 ? (skillsCarousel.scrollLeft / max) * 100 : 0) + '%';
+  };
+  skillsCarousel.addEventListener('mousedown', e => {
+    skDown = true; skillsCarousel.classList.add('grabbing');
+    skStartX = e.pageX - skillsCarousel.offsetLeft;
+    skScrollLeft = skillsCarousel.scrollLeft; e.preventDefault();
   });
-}, { threshold: 0.3 });
-document.querySelectorAll('.skill-bar').forEach(b => barObs.observe(b));
+  window.addEventListener('mouseup', () => { skDown = false; skillsCarousel.classList.remove('grabbing'); });
+  skillsCarousel.addEventListener('mousemove', e => {
+    if (!skDown) return;
+    skillsCarousel.scrollLeft = skScrollLeft - (e.pageX - skillsCarousel.offsetLeft - skStartX) * 1.8;
+    updateSkFill();
+  });
+  let skTx0 = 0, skSl0 = 0;
+  skillsCarousel.addEventListener('touchstart', e => { skTx0 = e.touches[0].clientX; skSl0 = skillsCarousel.scrollLeft; }, { passive: true });
+  skillsCarousel.addEventListener('touchmove', e => { skillsCarousel.scrollLeft = skSl0 - (e.touches[0].clientX - skTx0); updateSkFill(); }, { passive: true });
+  skillsCarousel.addEventListener('scroll', updateSkFill, { passive: true });
+}
 
 /* ── COUNTER ── */
 function animCount(el, target) {
