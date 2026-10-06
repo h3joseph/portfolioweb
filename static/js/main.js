@@ -295,3 +295,73 @@ document.querySelectorAll('.soft-tag').forEach(tag => {
     tag.style.transition = 'all .35s ease';
   });
 });
+
+/* ══════════════════════════════════════════════════
+   PROJETS : bulles cliquables + texte tapé
+══════════════════════════════════════════════════ */
+const bubbles = document.querySelectorAll('.bubble');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let typingTimer = null;
+
+// Le texte complet reste lisible par les lecteurs d'écran, la version tapée est décorative
+document.querySelectorAll('.pd-pitch').forEach(p => {
+  const text = p.textContent.trim();
+  p.innerHTML = '';
+  const full = document.createElement('span');
+  full.className = 'sr-only';
+  full.textContent = text;
+  const typed = document.createElement('span');
+  typed.className = 'pd-typed';
+  typed.setAttribute('aria-hidden', 'true');
+  typed.dataset.text = text;
+  p.append(full, typed);
+});
+
+function typePitch(detail) {
+  clearTimeout(typingTimer);
+  const typed = detail.querySelector('.pd-typed');
+  const text = typed.dataset.text;
+  if (reduceMotion) { typed.textContent = text; detail.classList.remove('typing'); return; }
+
+  detail.classList.add('typing');
+  typed.textContent = '';
+  const caret = document.createElement('span');
+  caret.className = 'pd-caret';
+  typed.after(caret);
+  let i = 0;
+  const step = () => {
+    typed.textContent = text.slice(0, ++i);
+    if (i < text.length) {
+      typingTimer = setTimeout(step, /[.,:?!]/.test(text[i - 1]) ? 140 : 16);
+    } else {
+      caret.remove();
+      detail.classList.remove('typing');
+    }
+  };
+  step();
+}
+
+function showProject(bubble) {
+  document.querySelectorAll('.pd-caret').forEach(c => c.remove());
+  bubbles.forEach(b => {
+    const on = b === bubble;
+    b.classList.toggle('active', on);
+    b.setAttribute('aria-pressed', on);
+    document.getElementById(b.getAttribute('aria-controls')).classList.toggle('active', on);
+  });
+  typePitch(document.getElementById(bubble.getAttribute('aria-controls')));
+}
+
+bubbles.forEach(b => b.addEventListener('click', () => showProject(b)));
+
+// Lance la première frappe quand la section apparaît à l'écran
+const stage = document.querySelector('.project-stage');
+if (stage && bubbles.length) {
+  const stageObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      showProject(document.querySelector('.bubble.active') || bubbles[0]);
+      stageObs.disconnect();
+    }
+  }, { threshold: 0.3 });
+  stageObs.observe(stage);
+}

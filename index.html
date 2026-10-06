@@ -218,45 +218,97 @@
         <div>
           <div class="section-label">
             <img src="image/Mami-wata.png" class="adinkra-icon" aria-hidden="true" />
-            Projets personnels
+            Projets
           </div>
           <h2 class="section-title">Les <span class="accent">Conquêtes</span></h2>
           <div class="kente-line"></div>
         </div>
       </div>
       <p class="chapter-quote reveal">"Entre deux batailles, il construit. Agents IA, jeux, outils : ce qu'il a bâti de ses propres mains."</p>
-      <div class="projects-grid">
+      <p class="flip-instruction reveal">Touchez une bulle pour découvrir le projet ↓</p>
 
-        <article class="project-card reveal">
-          <div class="pc-kind">Agent IA · RAG</div>
-          <h3 class="pc-title">Lex Personae</h3>
-          <p class="pc-desc">Agent documentaire open source qui aide les PME à se mettre en conformité <strong>IA Act</strong> et <strong>RGPD</strong>. On pose une question, l'agent répond en citant ses sources (Mistral + RAG sur base vectorielle Qdrant, « skills » réutilisables).</p>
-          <div class="tl-tags"><span>Mistral</span><span>RAG</span><span>Qdrant</span><span>Docker</span></div>
-          <div class="pc-links">
-            <a href="https://lex-personae.onrender.com/" target="_blank" rel="noopener" class="pc-link primary">Démo en ligne ↗</a>
-            <a href="https://github.com/h3joseph/lex-personae" target="_blank" rel="noopener" class="pc-link">GitHub</a>
+      <div class="bubbles reveal" role="group" aria-label="Projets">
+        <button class="bubble active" style="--i:0" aria-controls="pd-lex" aria-pressed="true">
+          <span class="bubble-name">Lex Personae</span><span class="bubble-kind">Agent IA</span>
+        </button>
+        <button class="bubble" style="--i:1" aria-controls="pd-goli" aria-pressed="false">
+          <span class="bubble-name">Goli</span><span class="bubble-kind">Jeu en ligne</span>
+        </button>
+        <button class="bubble" style="--i:2" aria-controls="pd-spotjob" aria-pressed="false">
+          <span class="bubble-name">SpotJob</span><span class="bubble-kind">Bot emploi</span>
+        </button>
+        <button class="bubble" style="--i:3" aria-controls="pd-verbatim" aria-pressed="false">
+          <span class="bubble-name">Verbatim</span><span class="bubble-kind">IA · Avis clients</span>
+        </button>
+        <button class="bubble" style="--i:4" aria-controls="pd-house" aria-pressed="false">
+          <span class="bubble-name">House Price</span><span class="bubble-kind">Machine learning</span>
+        </button>
+      </div>
+
+      <div class="project-stage">
+
+        <article class="project-detail active" id="pd-lex">
+          <div class="pd-kind">Agent IA · Conformité</div>
+          <h3 class="pd-title">Lex Personae</h3>
+          <p class="pd-pitch">IA Act, RGPD : des centaines de pages que les PME n'ont pas le temps de lire. Lex Personae les lit pour elles. Vous posez votre question avec vos mots, l'assistant répond en citant l'article exact. Moins d'incertitude juridique, plus de décisions prises en confiance.</p>
+          <div class="pd-skills">
+            <div><p class="pd-skills-title">Compétences techniques</p><div class="tl-tags"><span>Python</span><span>Mistral (LLM)</span><span>RAG</span><span>Qdrant</span><span>Docker</span><span>Déploiement Render</span></div></div>
+            <div><p class="pd-skills-title">Compétences humaines</p><div class="soft-skills"><span class="soft-tag">Vulgarisation</span><span class="soft-tag">Rigueur</span><span class="soft-tag">Écoute des besoins</span><span class="soft-tag">Autonomie</span></div></div>
           </div>
-          <p class="pc-note">La démo met ~1 min à se réveiller après une période d'inactivité.</p>
+          <div class="pc-links">
+            <a href="https://lex-personae.onrender.com/" target="_blank" rel="noopener" class="pc-link primary">Essayer la démo ↗</a>
+          </div>
+          <p class="pc-note">La démo met environ une minute à se réveiller si personne ne l'a ouverte récemment.</p>
         </article>
 
-        <article class="project-card reveal">
-          <div class="pc-kind">Game dev · Multijoueur</div>
-          <h3 class="pc-title">Goli</h3>
-          <p class="pc-desc">Jeu de rôle multijoueur en ligne, façon loup-garou, inspiré du masque <strong>Goli</strong> des Akans et des Baoulé. Les joueurs reçoivent un rôle et un destin, et s'affrontent en temps réel jour et nuit pour protéger le village.</p>
-          <div class="tl-tags"><span>Python</span><span>FastAPI</span><span>Socket.IO</span><span>Fly.io</span></div>
+        <article class="project-detail" id="pd-goli">
+          <div class="pd-kind">Game dev · Multijoueur temps réel</div>
+          <h3 class="pd-title">Goli</h3>
+          <p class="pd-pitch">Un loup-garou en ligne qui raconte une histoire : celle du Goli, le masque protecteur des Akans et des Baoulé. Rôles, destins, nuits de complots et jours de débats. Chacun joue depuis son téléphone, en direct. Une façon de faire vivre la culture ivoirienne le temps d'une partie entre amis.</p>
+          <div class="pd-skills">
+            <div><p class="pd-skills-title">Compétences techniques</p><div class="tl-tags"><span>Python</span><span>FastAPI</span><span>Socket.IO</span><span>POO</span><span>HTML/CSS/JS</span><span>Fly.io</span></div></div>
+            <div><p class="pd-skills-title">Compétences humaines</p><div class="soft-skills"><span class="soft-tag">Créativité</span><span class="soft-tag">Storytelling</span><span class="soft-tag">Game design</span><span class="soft-tag">Sens du détail</span></div></div>
+          </div>
           <div class="pc-links">
-            <a href="https://goli-village.fly.dev/" target="_blank" rel="noopener" class="pc-link primary">Jouer ↗</a>
-            <a href="https://github.com/h3joseph/goli" target="_blank" rel="noopener" class="pc-link">GitHub</a>
+            <a href="https://goli-village.fly.dev/" target="_blank" rel="noopener" class="pc-link primary">Jouer maintenant ↗</a>
           </div>
         </article>
 
-        <article class="project-card reveal">
-          <div class="pc-kind">Automatisation · Bot</div>
-          <h3 class="pc-title">SpotJob</h3>
-          <p class="pc-desc">Bot qui récupère les offres <strong>France Travail</strong> selon ton profil (ville, mots-clés, contrat) et les envoie sur <strong>Telegram</strong> trois fois par jour. Une PWA affiche le fil d'offres et permet de suivre ses candidatures.</p>
-          <div class="tl-tags"><span>Python</span><span>Scraping</span><span>Telegram</span><span>PWA</span></div>
+        <article class="project-detail" id="pd-spotjob">
+          <div class="pd-kind">Automatisation · Bot Telegram</div>
+          <h3 class="pd-title">SpotJob</h3>
+          <p class="pd-pitch">Chercher un emploi, c'est rafraîchir les mêmes sites tous les jours. SpotJob le fait à votre place : il repère les offres France Travail qui correspondent à votre ville, vos mots-clés et votre contrat, puis vous les envoie sur Telegram trois fois par jour. Une appli mobile suit vos candidatures. Vous ne ratez plus une offre.</p>
+          <div class="pd-skills">
+            <div><p class="pd-skills-title">Compétences techniques</p><div class="tl-tags"><span>Python</span><span>API France Travail</span><span>Scraping</span><span>Bot Telegram</span><span>PWA</span><span>Render</span></div></div>
+            <div><p class="pd-skills-title">Compétences humaines</p><div class="soft-skills"><span class="soft-tag">Sens produit</span><span class="soft-tag">Empathie utilisateur</span><span class="soft-tag">Persévérance</span><span class="soft-tag">Organisation</span></div></div>
+          </div>
+          <p class="pc-note">Projet privé · démonstration sur demande.</p>
+        </article>
+
+        <article class="project-detail" id="pd-verbatim">
+          <div class="pd-kind">IA hybride · Analyse d'avis</div>
+          <h3 class="pd-title">Verbatim</h3>
+          <p class="pd-pitch">Des centaines d'avis clients, et aucune idée de quoi en faire ? Verbatim les lit tous en quelques minutes : sentiment, points forts, points à améliorer, puis un plan d'action priorisé que vous pouvez discuter avec l'IA. Pour un hôtel, un restaurant ou un commerce, la voix du client devient une liste de décisions.</p>
+          <div class="pd-skills">
+            <div><p class="pd-skills-title">Compétences techniques</p><div class="tl-tags"><span>Python</span><span>BERT (NLP)</span><span>LLM Mistral / Gemini / Groq</span><span>Streamlit</span><span>Pandas</span><span>Pytest</span></div></div>
+            <div><p class="pd-skills-title">Compétences humaines</p><div class="soft-skills"><span class="soft-tag">Esprit d'analyse</span><span class="soft-tag">Orientation client</span><span class="soft-tag">Pédagogie</span><span class="soft-tag">Esprit critique</span></div></div>
+          </div>
           <div class="pc-links">
-            <a href="https://github.com/h3joseph/SpotJob" target="_blank" rel="noopener" class="pc-link primary">GitHub ↗</a>
+            <a href="https://verbatim-avis-ia.streamlit.app/" target="_blank" rel="noopener" class="pc-link primary">Essayer la démo ↗</a>
+            <a href="https://github.com/h3joseph/Verbatim" target="_blank" rel="noopener" class="pc-link">Code sur GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-detail" id="pd-house">
+          <div class="pd-kind">Machine learning · Régression</div>
+          <h3 class="pd-title">House Price Predict</h3>
+          <p class="pd-pitch">Combien vaut vraiment cette maison ? À partir de ses caractéristiques (surface, quartier, année de construction…), ce modèle de machine learning estime son prix de vente. Le projet sert aussi de tutoriel : du nettoyage des données à l'évaluation du modèle, chaque étape est expliquée simplement.</p>
+          <div class="pd-skills">
+            <div><p class="pd-skills-title">Compétences techniques</p><div class="tl-tags"><span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>EDA</span><span>Feature engineering</span><span>RMSE / R²</span></div></div>
+            <div><p class="pd-skills-title">Compétences humaines</p><div class="soft-skills"><span class="soft-tag">Curiosité</span><span class="soft-tag">Rigueur méthodologique</span><span class="soft-tag">Pédagogie</span><span class="soft-tag">Esprit de synthèse</span></div></div>
+          </div>
+          <div class="pc-links">
+            <a href="https://github.com/h3joseph/HOUSE-PRICE-PREDICT" target="_blank" rel="noopener" class="pc-link primary">Code sur GitHub ↗</a>
           </div>
         </article>
 
