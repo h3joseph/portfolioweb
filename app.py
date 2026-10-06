@@ -14,13 +14,13 @@ def index():
 def download_cv():
     """Téléchargement du CV PDF.
     Le fichier doit être placé dans :
-        static/cv/joseph_haccandy_cv.pdf
+        static/cv/cv-complet.pdf
     """
-    cv_path = os.path.join(app.static_folder, 'cv', 'joseph_haccandy_cv.pdf')
+    cv_path = os.path.join(app.static_folder, 'cv', 'cv-complet.pdf')
 
     if not os.path.exists(cv_path):
         return (
-            "CV non trouvé. Placez le fichier PDF dans static/cv/joseph_haccandy_cv.pdf",
+            "CV non trouvé. Placez le fichier PDF dans static/cv/cv-complet.pdf",
             404
         )
 

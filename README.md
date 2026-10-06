@@ -15,7 +15,7 @@ portfolio/
 │   ├── js/
 │   │   └── main.js                 ← Scripts (nouveau fichier à créer)
 │   └── cv/
-│       └── joseph_haccandy_cv.pdf  ← TON CV PDF (copier le fichier fourni ici)
+│       └── cv-complet.pdf  ← TON CV PDF (copier le fichier fourni ici)
 │
 └── README.md
 ```
@@ -27,7 +27,7 @@ portfolio/
 - `style.css`   → `static/css/style.css`
 - `main.js`     → `static/js/main.js`
 - `app.py`      → `app.py`
-- `joseph_haccandy_cv.pdf` → `static/cv/joseph_haccandy_cv.pdf`
+- `cv-complet.pdf` → `static/cv/cv-complet.pdf`
 
 ### 2. Créer les dossiers manquants
 ```bash

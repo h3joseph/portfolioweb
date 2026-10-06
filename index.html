@@ -17,6 +17,7 @@
     <a href="#hero"       class="cdot active"><span class="cdot-pip"></span><span class="cdot-label">Prologue</span></a>
     <a href="#about"      class="cdot"><span class="cdot-pip"></span><span class="cdot-label">L'Architecte</span></a>
     <a href="#experience" class="cdot"><span class="cdot-pip"></span><span class="cdot-label">Les Batailles</span></a>
+    <a href="#projets"    class="cdot"><span class="cdot-pip"></span><span class="cdot-label">Les Conquêtes</span></a>
     <a href="#formation"  class="cdot"><span class="cdot-pip"></span><span class="cdot-label">La Forge</span></a>
     <a href="#skills"     class="cdot"><span class="cdot-pip"></span><span class="cdot-label">L'Arsenal</span></a>
     <a href="#loisirs"    class="cdot"><span class="cdot-pip"></span><span class="cdot-label">L'Âme</span></a>
@@ -31,12 +32,13 @@
         <li><a href="#hero">Prologue</a></li>
         <li><a href="#about">Acte I</a></li>
         <li><a href="#experience">Acte II</a></li>
-        <li><a href="#formation">Acte III</a></li>
-        <li><a href="#skills">Acte IV</a></li>
-        <li><a href="#loisirs">Acte V</a></li>
+        <li><a href="#projets">Acte III</a></li>
+        <li><a href="#formation">Acte IV</a></li>
+        <li><a href="#skills">Acte V</a></li>
+        <li><a href="#loisirs">Acte VI</a></li>
         <li><a href="#contact">Épilogue</a></li>
       </ul>
-      <a href="static/cv/joseph_haccandy_cv.pdf" download class="nav-cta magnetic">↓ CV</a>
+      <a href="static/cv/cv-complet.pdf" download class="nav-cta magnetic">↓ CV</a>
     </div>
   </nav>
 
@@ -66,7 +68,7 @@
         <p class="hero-desc reveal"><em>Avant le rideau… une silhouette se dessine dans la lumière des données. Elle a un nom — et une histoire à raconter.</em></p>
         <div class="hero-actions reveal">
           <a href="#about" class="btn-primary magnetic">Ouvrir le rideau</a>
-          <a href="static/cv/joseph_haccandy_cv.pdf" download class="btn-ghost magnetic">
+          <a href="static/cv/cv-complet.pdf" download class="btn-ghost magnetic">
             <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".5"/></svg>
             Télécharger CV
           </a>
@@ -206,13 +208,70 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       FORMATION · ACTE III — symbole : Nzara
+       PROJETS · ACTE III — symbole : Mami-wata
   ═══════════════════════════════════════════════════ -->
-  <section id="formation">
-    <div class="adinkra-bg-pattern" style="background-image:url('image/nzara.png'); opacity:.026; background-size:75px 75px;"></div>
+  <section id="projets">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/Mami-wata.png'); opacity:.024; background-size:85px 85px;"></div>
     <div class="container">
       <div class="act-header reveal">
         <div class="act-number">III</div>
+        <div>
+          <div class="section-label">
+            <img src="image/Mami-wata.png" class="adinkra-icon" aria-hidden="true" />
+            Projets personnels
+          </div>
+          <h2 class="section-title">Les <span class="accent">Conquêtes</span></h2>
+          <div class="kente-line"></div>
+        </div>
+      </div>
+      <p class="chapter-quote reveal">"Entre deux batailles, il construit. Agents IA, jeux, outils : ce qu'il a bâti de ses propres mains."</p>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="pc-kind">Agent IA · RAG</div>
+          <h3 class="pc-title">Lex Personae</h3>
+          <p class="pc-desc">Agent documentaire open source qui aide les PME à se mettre en conformité <strong>IA Act</strong> et <strong>RGPD</strong>. On pose une question, l'agent répond en citant ses sources (Mistral + RAG sur base vectorielle Qdrant, « skills » réutilisables).</p>
+          <div class="tl-tags"><span>Mistral</span><span>RAG</span><span>Qdrant</span><span>Docker</span></div>
+          <div class="pc-links">
+            <a href="https://lex-personae.onrender.com/" target="_blank" rel="noopener" class="pc-link primary">Démo en ligne ↗</a>
+            <a href="https://github.com/h3joseph/lex-personae" target="_blank" rel="noopener" class="pc-link">GitHub</a>
+          </div>
+          <p class="pc-note">La démo met ~1 min à se réveiller après une période d'inactivité.</p>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="pc-kind">Game dev · Multijoueur</div>
+          <h3 class="pc-title">Goli</h3>
+          <p class="pc-desc">Jeu de rôle multijoueur en ligne, façon loup-garou, inspiré du masque <strong>Goli</strong> des Akans et des Baoulé. Les joueurs reçoivent un rôle et un destin, et s'affrontent en temps réel jour et nuit pour protéger le village.</p>
+          <div class="tl-tags"><span>Python</span><span>FastAPI</span><span>Socket.IO</span><span>Fly.io</span></div>
+          <div class="pc-links">
+            <a href="https://goli-village.fly.dev/" target="_blank" rel="noopener" class="pc-link primary">Jouer ↗</a>
+            <a href="https://github.com/h3joseph/goli" target="_blank" rel="noopener" class="pc-link">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="pc-kind">Automatisation · Bot</div>
+          <h3 class="pc-title">SpotJob</h3>
+          <p class="pc-desc">Bot qui récupère les offres <strong>France Travail</strong> selon ton profil (ville, mots-clés, contrat) et les envoie sur <strong>Telegram</strong> trois fois par jour. Une PWA affiche le fil d'offres et permet de suivre ses candidatures.</p>
+          <div class="tl-tags"><span>Python</span><span>Scraping</span><span>Telegram</span><span>PWA</span></div>
+          <div class="pc-links">
+            <a href="https://github.com/h3joseph/SpotJob" target="_blank" rel="noopener" class="pc-link primary">GitHub ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMATION · ACTE IV — symbole : Nzara
+  ═══════════════════════════════════════════════════ -->
+  <section id="formation" class="section-dark">
+    <div class="adinkra-bg-pattern" style="background-image:url('image/nzara.png'); opacity:.026; background-size:75px 75px;"></div>
+    <div class="container">
+      <div class="act-header reveal">
+        <div class="act-number">IV</div>
         <div>
           <div class="section-label">
             <img src="image/nzara.png" class="adinkra-icon" aria-hidden="true" />
@@ -301,13 +360,13 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       COMPÉTENCES · ACTE IV — symbole : Traitre
+       COMPÉTENCES · ACTE V — symbole : Traitre
   ═══════════════════════════════════════════════════ -->
-  <section id="skills" class="section-dark">
+  <section id="skills">
     <div class="adinkra-bg-pattern" style="background-image:url('image/traitre.png'); opacity:.022; background-size:85px 85px;"></div>
     <div class="container">
       <div class="act-header reveal">
-        <div class="act-number">IV</div>
+        <div class="act-number">V</div>
         <div>
           <div class="section-label">
             <img src="image/traitre.png" class="adinkra-icon" aria-hidden="true" />
@@ -429,13 +488,13 @@
   </section>
 
   <!-- ══════════════════════════════════════════════
-       LOISIRS · ACTE V — Carousel
+       LOISIRS · ACTE VI — Carousel
   ═══════════════════════════════════════════════════ -->
-  <section id="loisirs">
+  <section id="loisirs" class="section-dark">
     <div class="adinkra-bg-pattern" style="background-image:url('image/villageois.png'); opacity:.02; background-size:65px 65px;"></div>
     <div class="container">
       <div class="act-header reveal">
-        <div class="act-number">V</div>
+        <div class="act-number">VI</div>
         <div>
           <div class="section-label">
             <img src="image/villageois.png" class="adinkra-icon" aria-hidden="true" />
@@ -538,7 +597,7 @@
   <!-- ══════════════════════════════════════════════
        CONTACT · ÉPILOGUE — symbole : Mami Wata
   ═══════════════════════════════════════════════════ -->
-  <section id="contact" class="section-dark">
+  <section id="contact">
     <div class="adinkra-bg-pattern" style="background-image:url('image/Mami-wata.png'); opacity:.025; background-size:90px 90px;"></div>
     <div class="container">
       <div class="act-header reveal">
@@ -585,7 +644,7 @@
           <div class="cv-card-mini">
             <h3>Mon CV complet</h3>
             <p>Toutes mes expériences, compétences et formations en un seul document.</p>
-            <a href="static/cv/joseph_haccandy_cv.pdf" download class="btn-download magnetic">
+            <a href="static/cv/cv-complet.pdf" download class="btn-download magnetic">
               <svg viewBox="0 0 20 20" fill="none" width="16"><path d="M10 3v10M6 9l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="3" y="15" width="14" height="2" rx="1" fill="currentColor" opacity=".5"/></svg>
               Télécharger le CV
             </a>
